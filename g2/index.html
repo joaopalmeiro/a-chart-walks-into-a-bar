@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>G2</title>
+    <script src="https://gw.alipayobjects.com/os/lib/antv/g2/4.1.2/dist/g2.min.js"></script>
+  </head>
+  <body>
+    <!-- Chart container. -->
+    <div id="c1"></div>
+
+    <script>
+      // Based on: https://g2.antv.vision/en/docs/manual/getting-started.
+      // Example: https://g2.antv.vision/en/examples/case/line#line1.
+      fetch('data.json')
+        .then((res) => res.json())
+        .then((data) => {
+          G2.registerTheme('customTheme', {
+            background: 'white',
+          });
+
+          // console.log(window.devicePixelRatio); // 2
+
+          // Step 1: Create a Chart instance.
+          const chart = new G2.Chart({
+            container: 'c1', // Specify the chart container ID
+            width: 600, // Specify the chart width
+            height: 300, // Specify the chart height
+            theme: 'customTheme',
+            pixelRatio: 5, // Resolution
+          });
+
+          // Step 2: Load the data (JSON array).
+          chart.data(data);
+
+          // Example: https://g2.antv.vision/en/examples/case/dynamic#dynamic-bubble.
+          chart.scale({
+            a: {
+              alias: 'a',
+            },
+            b: {
+              alias: 'b',
+              // nice: true, // Y-axis: [0-100]
+            },
+          });
+
+          // Example: https://g2.antv.vision/en/examples/other/other#double-axes.
+          chart.axis('a', {
+            title: {},
+          });
+
+          chart.axis('b', {
+            title: {},
+          });
+
+          // Step 3：Declare the grammar of graphics, draw bar chart.
+          chart.interval().position('a*b');
+
+          // Step 4: Render chart.
+          chart.render();
+
+          // `chart.downloadImage()` is no longer available: https://g2.antv.vision/en/docs/manual/faq.
+        });
+    </script>
+  </body>
+</html>

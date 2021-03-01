@@ -1,0 +1,12 @@
+{
+  "name": "g2",
+  "version": "1.0.0",
+  "scripts": {
+    "live": "live-server"
+  },
+  "author": "João Palmeiro",
+  "license": "MIT",
+  "dependencies": {
+    "live-server": "^1.2.1"
+  }
+}

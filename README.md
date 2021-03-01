@@ -2,6 +2,7 @@
 
 ## Table of Contents
 
+- [G2](g2) <kbd>JavaScript</kbd>
 - [ScottPlot](dotnet-scottplot) <kbd>.NET</kbd>
 - [Vega-Lite](vega-lite) <kbd>JavaScript</kbd>
 
