@@ -17,6 +17,9 @@
 - https://rust-analyzer.github.io/
   - https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer
 - https://github.com/rust-lang/rustfmt
+- https://github.com/yuankunzhang/charming
+- https://github.com/wangjiawen2013/charton
+- https://devenv.sh/
 
 ## Commands
 
